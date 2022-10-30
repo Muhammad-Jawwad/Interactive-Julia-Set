@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-        <title>WebGL Julia Set By GPU</title>
 
-        <script id="vertex-shader" type="x-shader/x-vertex">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>WebGL Julia Set By GPU</title>
+
+    <script id="vertex-shader" type="x-shader/x-vertex">
             #version 300 es
             
             in vec2 vPosition;
@@ -16,9 +17,9 @@
                 gl_Position = vec4(matrix * vec3(vPosition, 0.0), 1.0);
                 position = vPosition;
             } 
-        </script> 
+        </script>
 
-        <script id="fragment-shader" type="x-shader/x-fragment">
+    <script id="fragment-shader" type="x-shader/x-fragment">
             #version 300 es
 
             precision highp float;
@@ -77,11 +78,11 @@
         </script>
 
 
-        <script type="text/javascript" src="initShadersES6.js"></script>
-        <script type="text/javascript" src="MVES6.js"></script>
-        <script type="text/javascript" src="map.js"></script>
-        <script type="text/javascript" src="julia.js"></script>
-    </head>
+    <script type="text/javascript" src="initShadersES6.js"></script>
+    <script type="text/javascript" src="MVES6.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="julia.js"></script>
+</head>
 <style>
     * {
         background-color: rgb(72, 209, 204);
@@ -89,22 +90,32 @@
         padding: 0%;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+
     h1 {
-        color:rgb(0, 3, 3);
+        color: rgb(0, 3, 3);
         text-align: right;
-        padding-right: 500px;
         padding-top: 100px;
         font-size: xx-large;
-        
+        padding:20px
+
     }
 </style>
 
-    <body>
-        <div>
+<body>
+    <div style="display:flex;">
+        <div style="border: 5px solid black;">
             <canvas id="gl-canvas" width="750" height="750">
                 Oops ... your browser doesn't support the HTML5 canvas element
             </canvas>
         </div>
-        <div><h1>Render Jam Fall 2022</h1></div>
-    </body>
+        <div style="padding-left: 50px; padding-top: 100px;">
+            <h1 style="color: azure; background:black;border-radius: 30px; margin-bottom: 30px;">Render Jam Fall 2022</h1>
+            <div style="padding:20px;border-radius:30px;background:black!important;color:azure ">
+            <h2 style="background:black!important;color:azure ">Description: </h2>
+            <p style="background:black!important;color:azure ">This is Picture</p>
+        </div>
+    </div>
+    </div>
+</body>
+
 </html>
